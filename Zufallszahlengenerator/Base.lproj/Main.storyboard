@@ -1,24 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Zufallszahlengenerator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5B6-Vd-eIs">
+                                <rect key="frame" x="0.0" y="176" width="320" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NgE-ne-Bqc">
+                                <rect key="frame" x="45.5" y="449" width="229" height="34"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Zahl zwischen 0 und 100 wählen">
+                                    <fontDescription key="titleFontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="14"/>
+                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="chooseButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bTB-Id-t5S"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="67" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h9c-gz-VCF">
+                                <rect key="frame" x="110" y="387" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="0j6-FJ-4i9"/>
+                                    <constraint firstAttribute="height" constant="50" id="NAT-u1-mwx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zufallszahlengenerator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edz-6d-RRB">
+                                <rect key="frame" x="16" y="95" width="288" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DE5-nf-EFf"/>
+                                    <constraint firstAttribute="width" constant="288" id="sk7-G9-63d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NgE-ne-Bqc" firstAttribute="top" secondItem="h9c-gz-VCF" secondAttribute="bottom" constant="12" id="0HC-nU-To5"/>
+                            <constraint firstItem="5B6-Vd-eIs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9qc-IK-9ee"/>
+                            <constraint firstItem="edz-6d-RRB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="Eet-Na-eXM"/>
+                            <constraint firstItem="5B6-Vd-eIs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SNn-8H-rpt"/>
+                            <constraint firstItem="h9c-gz-VCF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VIq-UU-4Ze"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NgE-ne-Bqc" secondAttribute="bottom" constant="85" id="bG1-Jd-Zut"/>
+                            <constraint firstItem="edz-6d-RRB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eRa-ZE-KNh"/>
+                            <constraint firstItem="NgE-ne-Bqc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xKS-06-IPn"/>
+                            <constraint firstItem="h9c-gz-VCF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ywn-In-eKg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="chooseButton" destination="NgE-ne-Bqc" id="6aw-nq-hvA"/>
+                        <outlet property="picker" destination="5B6-Vd-eIs" id="KBl-rt-cGX"/>
+                        <outlet property="resultLabel" destination="h9c-gz-VCF" id="6FP-p6-B4v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="129.375" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
